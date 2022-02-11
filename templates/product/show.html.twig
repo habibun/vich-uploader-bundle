@@ -23,6 +23,11 @@
                 <th>Description</th>
                 <td>{{ product.description }}</td>
             </tr>
+            <tr>
+                <th>Image</th>
+{#                <td><img src="{{ vich_uploader_asset(product, 'imageFile') }}" alt="{{ product.name }}"></td>#}
+                <td><img width="200" height="200" src="{{ asset(vich_uploader_asset(product, 'imageFile')) }}" alt="{{ product.name }}"></td>
+            </tr>
         </tbody>
     </table>
 
