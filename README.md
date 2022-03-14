@@ -1,9 +1,9 @@
 # vich-uploader-bundle
 Implements VichUploaderBundle in symfony
 
-| Repository Branch | VichUploaderBundle Version | Symfony Version | PHP Version     |
-|-------------------|----------------------------|-----------------|-----------------|
-| [1.x][1]          | `1.x`                      | `5.4.x`         | `7.2` or higher | 
+| Branch   | VichUploaderBundle Version | Symfony Version | PHP Version     |
+|----------|----------------------------|-----------------|-----------------|
+| [1.x][1] | `1.x`                      | `5.4.x`         | `7.2` or higher | 
 
 
 Read [VichUploaderBundle Docs](https://github.com/dustin10/VichUploaderBundle/blob/master/docs/index.md)
