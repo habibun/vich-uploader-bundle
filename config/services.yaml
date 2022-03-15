@@ -4,6 +4,8 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    aws_s3_key: '%env(resolve:AWS_S3_KEY)%'
+    aws_s3_secret: '%env(resolve:AWS_S3_SECRET)%'
 
 services:
     # default configuration for services in *this* file
@@ -29,3 +31,13 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    aws.s3_client:
+        class: Aws\S3\S3Client
+        public: true
+        arguments:
+            -
+                version: '2006-03-01' # or 'latest'
+                region: "us-east-1" # 'eu-central-1' for example
+                credentials:
+                    key: "%aws_s3_key%"
+                    secret: "%aws_s3_secret%"

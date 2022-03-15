@@ -9,6 +9,8 @@
         "doctrine/doctrine-bundle": "^2.1",
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.7",
+        "league/flysystem-aws-s3-v3": "^2.4",
+        "oneup/flysystem-bundle": "^4.4",
         "sensio/framework-extra-bundle": "^6.0",
         "symfony/asset": "5.4.*",
         "symfony/console": "5.4.*",
@@ -83,7 +85,8 @@
     "extra": {
         "symfony": {
             "allow-contrib": true,
-            "require": "5.4.*"
+            "require": "5.4.*",
+            "docker": true
         }
     }
 }
