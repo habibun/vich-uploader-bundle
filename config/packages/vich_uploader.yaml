@@ -6,5 +6,6 @@ vich_uploader:
     mappings:
         product_image:
             uri_prefix: uploads/images/products
-            upload_destination: default_filesystem
+#            upload_destination: oneup_flysystem.default_filesystem_filesystem
+            upload_destination: oneup_flysystem.aws_filesystem_filesystem
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer

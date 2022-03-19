@@ -37,7 +37,7 @@ class ProductController extends AbstractController
      */
     public function new(Request $request, ContainerInterface $c): Response
     {
-//        $filesystem = $c->get('oneup_flysystem.default_filesystem_filesystem');
+//        $filesystem = $c->get('oneup_flysystem.aws_filesystem_filesystem');
 //        $filesystem = $c->get('acme_filesystem');
 //        dd($filesystem);
         $product = new Product();

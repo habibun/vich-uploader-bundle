@@ -4,7 +4,16 @@ oneup_flysystem:
         default_adapter:
             local:
                 location: '%kernel.project_dir%/public/uploads/images/products'
+        aws_adapter:
+            awss3v3:
+                client: aws.s3_client
+                bucket: ~
+                prefix: ~
     filesystems:
         default_filesystem:
             adapter: default_adapter
-            alias: League\Flysystem\Filesystem
+            mount: default_filesystem
+        aws_filesystem:
+            adapter: aws_adapter
+            mount: aws_filesystem
+
