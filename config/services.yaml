@@ -6,6 +6,7 @@
 parameters:
     aws_s3_key: '%env(resolve:AWS_S3_KEY)%'
     aws_s3_secret: '%env(resolve:AWS_S3_SECRET)%'
+    aws_s3_region: '%env(resolve:AWS_S3_REGION)%'
 
 services:
     # default configuration for services in *this* file
@@ -36,8 +37,8 @@ services:
         public: true
         arguments:
             -
-                version: '2006-03-01' # or 'latest'
-                region: "us-east-1" # 'eu-central-1' for example
+                version: '2006-03-01'
+                region: "%aws_s3_region%s"
                 credentials:
                     key: "%aws_s3_key%"
                     secret: "%aws_s3_secret%"

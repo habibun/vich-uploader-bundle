@@ -1,4 +1,3 @@
-# Read the documentation: https://github.com/1up-lab/OneupFlysystemBundle
 oneup_flysystem:
     adapters:
         default_adapter:
@@ -7,8 +6,10 @@ oneup_flysystem:
         aws_adapter:
             awss3v3:
                 client: aws.s3_client
-                bucket: ~
-                prefix: ~
+                bucket: vich
+                prefix: /vich
+                options:
+                    ACL: bucket-owner-full-control
     filesystems:
         default_filesystem:
             adapter: default_adapter
@@ -16,4 +17,5 @@ oneup_flysystem:
         aws_filesystem:
             adapter: aws_adapter
             mount: aws_filesystem
-
+            visibility: public
+            directory_visibility: public
