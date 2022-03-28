@@ -6,10 +6,8 @@ oneup_flysystem:
         aws_adapter:
             awss3v3:
                 client: aws.s3_client
-                bucket: vich
-                prefix: /vich
-                options:
-                    ACL: bucket-owner-full-control
+                bucket: '%aws_s3_bucket%'
+                prefix: ''
     filesystems:
         default_filesystem:
             adapter: default_adapter
@@ -17,5 +15,3 @@ oneup_flysystem:
         aws_filesystem:
             adapter: aws_adapter
             mount: aws_filesystem
-            visibility: public
-            directory_visibility: public
